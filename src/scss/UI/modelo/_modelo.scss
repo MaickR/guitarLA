@@ -1,0 +1,31 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.modelo{
+    color: v.$blanco;
+    margin-top: 5rem;
+    text-align: center;
+
+    @include m.tablet { 
+        text-align: left;
+        width: 50%;
+     } 
+
+    &__nombre { 
+        font-size: 8rem;
+     } 
+
+    
+
+      &__precio { 
+        font-size: 6rem;
+        color: v.$primary;
+        font-weight: 900;
+        line-height: 0;
+       } 
+
+       &__enlace { 
+        @include m.boton(v.$primary, v.$blanco);
+     
+        } 
+}

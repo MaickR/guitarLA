@@ -1,0 +1,53 @@
+@use "base/mixins" as m;
+@use "base/variables" as v;
+
+.cursos {
+  background-image: linear-gradient(to right, rgb(0 0 0 /0.7), rgb(0 0 0 /0.7)),
+    url(../img/cursos_bg.jpg);
+
+  padding: 10rem 0;
+  margin-top: 10rem;
+  background-size: cover;
+  background-position: 50%;
+
+  &__grid { 
+    @include m.tablet { 
+        @include m.grid(2, 2rem); 
+     } 
+   } 
+
+  &__contenido { 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include m.tablet { 
+        grid-column: 2/3;
+     } 
+   } 
+
+  &__texto { 
+    color: v.$blanco;
+    text-align: center;
+    font-size: 2.4rem;
+   } 
+
+   &__enlace { 
+        color: v.$blanco;
+        margin-top: 2rem;
+        display: inline-block;
+        border: 2px solid v.$primary;
+        text-decoration: none;
+        padding: 1rem 5rem;
+        text-transform: uppercase;
+        font-size: 1.4rem;
+        font-weight: 700;
+        @include m.transition; 
+
+        &:hover { 
+            background-color: v.$primary;
+            color: v.$blanco;
+         } 
+    } 
+
+
+}

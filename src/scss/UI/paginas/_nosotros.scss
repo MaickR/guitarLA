@@ -1,0 +1,15 @@
+@use 'base/mixins' as m;
+@use 'base/variables' as v;
+
+.nosotros{
+
+    &__grid { 
+        display: grid;
+        gap: 4rem;
+
+        @include m.tablet { 
+            @include m.grid(2, 4rem); 
+            align-items: center;
+         } 
+     } 
+}
